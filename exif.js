@@ -1047,7 +1047,7 @@
     }
 
     EXIF.readFromBinaryFile = function(file) {
-        return findEXIFinJPEG(file);
+        return {exif:findEXIFinJPEG(file),iptc:findIPTCinJPEG(file)};
     }
 
     if (typeof define === 'function' && define.amd) {
